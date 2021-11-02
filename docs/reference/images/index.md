@@ -1,9 +1,9 @@
 ---
-title: Pictures
+title: Bilder
 nav_order: 30
-parent: Feature Reference
+parent: Funktionsreferenz
 has_children: true
 ---
 
-## Pictures
+## Bilder
 

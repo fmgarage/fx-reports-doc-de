@@ -1,10 +1,10 @@
 ---
-title: Troubleshooting
+title: Fehlerbehebung
 nav_order: 60
 has_children: true
 ---
 
-## Troubleshooting
+## Fehlerbehebung
 
 - Performance
 - Schema Errors

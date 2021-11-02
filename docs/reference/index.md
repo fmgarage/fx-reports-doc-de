@@ -1,10 +1,10 @@
 ---
-title: Feature Reference
+title: Funktionsreferenz
 nav_order: 30
 has_children: true
 ---
 
-## Feature Reference
+## Funktionsreferenz
 
 ### Paths
 

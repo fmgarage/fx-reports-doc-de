@@ -1,8 +1,8 @@
 ---
-title: Under the Hood
+title: Hintergrund
 nav_order: 50
 has_children: true
 ---
 
-## Under the Hood
+## Hintergrund
 
