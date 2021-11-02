@@ -3,7 +3,7 @@ title: Start
 nav_order: 1
 ---
 
-## Welcome to FX_Reports
+## Welcome to FX Reports
 
 FX_Reports is a powerful extension for genererating fully-featured spreadsheets in xslx format from FileMaker. It can easily be integrated into you existing solution.
 
