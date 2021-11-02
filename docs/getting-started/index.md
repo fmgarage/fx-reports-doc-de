@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Erste Schritte
 has_children: true
 nav_order: 20
 ---
@@ -9,5 +9,5 @@ nav_order: 20
 - Installation
 
 - (Templates per drag & drop)
-- Integration
+- Implementierung
 

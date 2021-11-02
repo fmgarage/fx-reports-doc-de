@@ -7,6 +7,28 @@ nav_order: 10
 
 ## Installation
 
+
+
+### FileMaker Pro
+
+Eine Installation von FileMaker Pro in der Version 18 wird vorausgesetzt.
+
+
+
+### MBS-Plugin
+
+FX_Reports benötigt das MBS-Plugin. Zum Ausprobieren wird keine Lizenz benötigt, die Demoversion des Plugins ist fast uneingeschränkt nutzbar. Download und Infos zu Lizenzen gibt es bei [Monkeybread Software](https://www.monkeybreadsoftware.com/filemaker/buy/).
+
+
+
+
+
+### LibXL
+
+Für die Erstellung von Excel-Dokumenten wird die Erweiterung LibXL benötigt. Die Bibliothek wird über das MBS-Plugin angesprochen. 
+
+
+
 ### Hosting mit FileMaker Server
 
 - benötigt eine entsprechende Lizenz, funktioniert nicht mit der Demo
