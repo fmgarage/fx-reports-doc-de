@@ -4,7 +4,7 @@ has_children: true
 nav_order: 20
 ---
 
-## Getting Started
+## Erste Schritte
 
 - Installation
 
