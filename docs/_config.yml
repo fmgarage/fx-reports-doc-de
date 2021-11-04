@@ -5,7 +5,5 @@ logo: "/assets/images/logo.png"
 
 # Aux links for the upper right navigation
 aux_links:
-  "EN":
-    https://fmgarage.github.io/fx-reports-doc-en/
   "FMGARAGE Homepage":
     - "//fmgarage.com"
