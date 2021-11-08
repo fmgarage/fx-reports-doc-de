@@ -2,7 +2,7 @@
 title: Implementierung
 has_children: true
 parent: Erste Schritte
-nav_order: 20
+nav_order: 2
 ---
 
 ## Implementierung

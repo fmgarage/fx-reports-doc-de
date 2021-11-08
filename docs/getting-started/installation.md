@@ -2,7 +2,7 @@
 title: Installation
 has_children: true
 parent: Erste Schritte
-nav_order: 10
+nav_order: 1
 ---
 
 ## Installation
