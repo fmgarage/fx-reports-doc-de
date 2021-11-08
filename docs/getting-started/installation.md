@@ -25,11 +25,13 @@ FX_Reports benötigt das MBS-Plugin. Zum Ausprobieren wird keine Lizenz benötig
 
 ### LibXL
 
-Für die Erstellung von Excel-Dokumenten wird die Erweiterung LibXL benötigt. Die Bibliothek wird über das MBS-Plugin angesprochen. 
+Für die Erstellung von Excel-Dokumenten wird die Erweiterung LibXL benötigt. Die Bibliothek wird über das MBS-Plugin angesprochen.
+
+Die LibXL in das Plugin Verzeichnis von Filemaker kopieren.
 
 
 
 ### Hosting mit FileMaker Server
 
 - benötigt eine entsprechende Lizenz, funktioniert nicht mit der Demo
-- 
+-  

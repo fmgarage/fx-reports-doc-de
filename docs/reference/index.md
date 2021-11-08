@@ -1,25 +1,9 @@
 ---
-title: Funktionsreferenz
+title: Referenz
 nav_order: 30
 has_children: true
 ---
 
-## Funktionsreferenz
+## Referenz
 
-### Paths
-
-- file paths
-- container fields
-- dynamic paths (tmp, desktop)
-
-
-
-#### Position
-
-- for row, column, cell
-- implicit vs. explicit
-- ranges
-
-#### Type
-
-- data, header, 
+- Template-Eigenschaften

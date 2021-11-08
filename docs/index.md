@@ -5,15 +5,17 @@ nav_order: 1
 
 ## Willkommen zu FX Reports
 
-**FX Reports** ist eine extrem leistungsfähige Erweiterung für deine FileMaker-Lösung. 
+**FX Reports** ist eine extrem leistungsfähige Erweiterung zur Erstellung von Exporten bei fast alle Funktionen von Excel unterstützt werden, also z.B. Farben, Formate, Bilder und so weiter. Dazu ist **FM Reports** kinderleicht zu integrieren und die Templates für die Ausgabeformate sind einfache JSON-Dokumente.
 
-  a powerful extension for genererating fully-featured spreadsheets in xslx format from FileMaker. It can easily be integrated into you existing solution.
 
-### What can it do?
 
-Exports from a FileMaker database are extremely quick to set up but also very limited – think of human readable column headers for instance. On the other end there is [LibXL](https://www.libxl.com) via the [MBS plugin](https://www.mbsplugins.eu/component_XL.shtml) where you can (and have to!) define every single detail of every cell that you want to put into your Excel file.
+### Was kann ich damit machen?
 
-FX_Reports combines both the simplicity and flexibility into a single tool. You can use JSON to define the structure and content of your output file. For instance changing the column headers of a previously exported file looks something like this:
+Exporte aus FileMaker sind schnell eingerichtet, aber extrem limitiert, nicht nur, was die Formatierung angeht. Das fängt bei den Spaltenüberschriften an, die automatisch von den Tabellen- und Feldnamen übernommen werden. An anderen Ende des Spektrums gibt es das [MBS-Plugin](https://www.mbsplugins.eu/component_XL.shtml) und die [LibXL](https://www.libxl.com)-Erweiterung, mit denen man jede erdenkliche Exceldatei erstellen und mit allen Details, Zelle für Zelle, definieren kann – bzw. auch muss. Das ist in der Regel äußerst mühsam und erfordert eine Menge Programmierarbeit bei der Erstellung eines Ausgabeformats. 
+
+Hier setzt **FX Reports** an und vereint Einfachheit und Flexibilität in einem Tool: Als ein sogenannter Wrapper für die Excel-Funktionen des MBS-Plugins kann der gesamte Funktionsumfang unterstützt werden, die Definition erfolgt mithilfe Text in Form von JSON, getreu dem Motto: *“Simple things should be simple, complex things should be possible”* (Alan Kay).
+
+Ein kleines Beispiel: Das Austauschen der Spaltenüberschriften in einer Exportdatei geht so:
 
 ```json
 { "rows": [
@@ -22,20 +24,19 @@ FX_Reports combines both the simplicity and flexibility into a single tool. You 
 ]}
 ```
 
-Most of the Excel features are already supported, like
 
-- multiple sheets
-- formatting of text, numbers, dates etc.
-- images
 
-We will constantly improve the functionality of FX_Reports, so if you have a feature request, feel free to add or comment on an issue [here](https://github.com/fmgarage/fx-reports/labels/enhancement) 
+Ein großer Vorteil von **FX Reports** liegt darin, dass neue Exportformate oder Änderungen an bestehenden nicht mehr programmiert werden müssen, es reicht die Bereitstellung eines Textes. 
 
 
 
+Ein Großteil der Excel-Funktionalität wird in der aktuellen Version bereits unterstützt, unter anderem:
 
+- mehrere Arbeitsblätter
+- Formatierung von Text, Zahlen, Datum und Zeit
+- Bilder (z.B. Logos oder Icons)
 
-
-following the golden rule *“Simple things should be simple, complex things should be possible”* (Alan Kay). This is accomplished by a
+**FX Reports** wird von uns kontinuiertlich verbessert und der Funktionsumfang erweitert. Wenn du eine Idee oder einen Verbesserungsvorschlag hast, schreib einfach ein [Issue](https://github.com/fmgarage/fx-reports/labels/enhancement) oder starte eine [Diskussion](https://github.com/fmgarage/fx-reports/discussions) (in English please!). 
 
 ### What's in the Pipeline?
 
