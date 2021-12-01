@@ -1,6 +1,5 @@
 ---
 title: Template-Erstellung
-nav_order: 30
 has_children: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Dokument
 parent: Template-Erstellung
-nav_order: 10
+nav_order: 1
 has_children: false
 ---
 
