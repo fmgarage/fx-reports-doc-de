@@ -45,7 +45,7 @@ Download:
 
 Für die Erstellung von Excel-Dokumenten wird die Erweiterung LibXL ab Version (xxx) benötigt. Die Bibliothek wird über das MBS-Plugin angesprochen.
 
-Wie auch das MBS Plugin wird die LibXL Datei in das Plugin Verzeichnis von Filemaker kopiert.
+Wie auch das MBS-Plugin wird die LibXL Datei in das Plugin Verzeichnis von Filemaker kopiert.
 
 ### FX_Reports öffnen/installieren(?)
 

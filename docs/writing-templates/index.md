@@ -4,13 +4,12 @@ nav_order: 30
 has_children: true
 ---
 
-## Was ist ein Template?
+## Einführung Templates
+## Introduction to templates
 
 Ein Template definiert das zu erstellende Excel Dokument. Es beschreibt, wie es aussieht und welche Daten an welcher Stelle stehen. Das Template ist zwingend notwendig/unabdingbar, um mit FX Reports Excelausgaben zu erstellen. Wenn man nicht gleich ein eigenes Template "from scratch" erstellen will, ist es eine gute Idee, ein vorhandenes zu nehmen und anzupassen.
 
 Als Blaupause/Vorlage/Bauanleitung braucht ein Template ein valides **JSON Schema**. Darin sind die erlaubten Werte und Strukturen zum Bauen eines Templates definiert. Zum Beispiel wird darin festgelegt, an welcher Stelle man Spalten und Zellen schreiben kann oder welche Schlüssel und Werte in einem Format definiert werden dürfen. Das Schema für FX Reports haben wir in `https://fmgarage.com/schemas/json2excel/v2-1-0.json`@todo definiert.
-
-
 
 ## Template-Erstellung > Bearbeitung/Werkzeuge?
 
@@ -95,24 +94,24 @@ Dann folgen Eigenschaften des Arbeitsblattes. Das können auch wieder Formatopti
 
 **Spalten:**
 
-Hier werden Format- und Dateneigenschaften eingestellt. Dazu gehören u.a. die Spaltenbreite und Position. 
+Hier werden Format- und Dateneigenschaften eingestellt. Dazu gehören u.a. die Spaltenbreite und Position.
 
 
 
 **Zeilen:**
 
-Hier können sowohl Kopf- als auch Datenzeilen und Auswertungen definiert werden. Daten können als individuelle Zeilen oder als Referenz auf eine Datenquelle im Template gespeichert werden. Zeilenspezifische Formatoptionen werden hier ebenfalls festgelegt. 
+Hier können sowohl Kopf- als auch Datenzeilen und Auswertungen definiert werden. Daten können als individuelle Zeilen oder als Referenz auf eine Datenquelle im Template gespeichert werden. Zeilenspezifische Formatoptionen werden hier ebenfalls festgelegt.
 
 
 
 **Zellen:**
 
-Für einzelne Zellen kann über ihre Position Größe, Format oder auch Inhalt, also Daten oder etwa eine Bilddatei (z.B. für Logos), festgelegt werden. So können auch aufwändig gestaltete Dokumente mit Überschriften, Beschreibungstexten oder Logos umgesetzt werden. 
+Für einzelne Zellen kann über ihre Position Größe, Format oder auch Inhalt, also Daten oder etwa eine Bilddatei (z.B. für Logos), festgelegt werden. So können auch aufwändig gestaltete Dokumente mit Überschriften, Beschreibungstexten oder Logos umgesetzt werden.
 
 
 
 
-## Wir erstellen ein Beispieltemplate
+## Wir erstellen ein Beispieltemplate / Erstellen eines Beispieltemplates
 
 ```json
 {

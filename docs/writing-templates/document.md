@@ -46,16 +46,16 @@ Name des Arbeitsblattes. Standardwert: sheet[n]
 ### columns
 
 Liste von Spalten.
-Siehe [Column]({% post_url column %})
+Siehe [Spalte]({{ site.baseurl }}{% link writing-templates/column.md %})
 
 ### rows
 Liste von Zeilen.
-Siehe [Row]({% post_url row %})
+Siehe [Zeile]({{ site.baseurl }}{% link writing-templates/row.md %})
 
 
 ### cells
 Liste von Zellen.
-Siehe [Cell]({% post_url cell %})
+Siehe [Zelle]({{ site.baseurl }}{% link writing-templates/cell.md %})
 
 
 ### display

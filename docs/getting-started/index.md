@@ -7,11 +7,3 @@ nav_order: 20
 ## Erste Schritte
 
 Im folgenden zeigen wir, wie FX Reports installiert wird und wie Du es in deine Anwendung implementieren kannst.
-
-
-
-- Installation
-- testen?
-- (Templates per drag & drop)
-- Implementierung
-
