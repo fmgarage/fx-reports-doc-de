@@ -48,6 +48,6 @@ Mit einem JSON Schema als Metaformat komplexe PDF Dokumente definieren und erste
 
 #### Word
 
-### Support or Contact
+### Support und Kontakt
 
 Probleme mit der Integration von FX Reports? Nicht sicher, ob FX Reports zu Deinen Anforderungen passt? Wir unterstützen gerne, kontaktiere uns einfach über unsere Website, bei Twitter ([@fmgarage](https://twitter.com/fmgarage)) oder per E-Mail (support@fmgarage.com).

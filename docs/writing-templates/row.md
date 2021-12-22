@@ -7,11 +7,10 @@ has_children: false
 
 ## Zeile
 
-In einer Zeile können Daten stehen, oder sie ist eine Kopfzeile bzw. eine Zusammenfassung.
+In einer Zeile können Daten stehen, oder sie ist eine Kopfzeile oder eine Zusammenfassung.
 
-Wenn eine Zeile Daten enthalten soll, gibt es unterschiedliche Arten, diese bereitzustellen. Wenn die bereitgestellten Daten aus mehreren Sets bestehen, können auch mehrere Zeilen aus einem `row` Objekt entstehen.
-Die Daten können direkt in das Objekt unter `values` geschrieben werden oder man verweist mit `path` auf eine externe Datei oder Felder? >@todo
-
+Wenn eine Zeile Daten enthalten soll, gibt es unterschiedliche Arten, diese bereitzustellen: Die Daten können direkt in das Objekt unter `values` geschrieben werden oder man verweist mit `path` auf eine externe Datei oder Felder? >@todo
+Bestehen die bereitgestellten Daten aus mehreren Sets, werden auch mehrere Zeilen aus einem `row` Objekt entstehen.
 Wenn eine Zeile eine Kopfzeile sein soll, muss `"type": "header"` gesetzt sein.
 
 Bei einer Zusammenfassung ...
@@ -21,12 +20,12 @@ Bei einer Zusammenfassung ...
 "rows": [
     {
         "type": "header",
-        "values": [ "Title", "Firstname", "Surname"],
+        "values": [ "Title", "Firstname", "Surname" ],
         "format": "bold"
     },
     {
         "path": "desktop/examples/data-blocks/data-file.xlsx",
-        "fields": [ "Title", "GivenName", "Surname"]
+        "fields": [ "Title", "GivenName", "Surname" ]
     }
 ]
 ```
@@ -97,7 +96,9 @@ Welche Felder sollen aus der Quelldatei geholt werden. Bezieht sich auf die Kopf
 
 *abhängig von* `path`
 
-Legt fest, ob die erste Zeile eingeschlossen ist, wenn Daten aus Quelldatei geholt werden. Sollte auf `true` gesetzt werden, wenn die Quelldatei ein Kopfzeile hat, die nicht im Zieldokument auftauchen soll.
+*default* `true`
+
+Legt fest, ob die erste Zeile eingeschlossen ist, wenn Daten aus Quelldatei geholt werden. Sollte auf `false` gesetzt werden, wenn die Quelldatei ein Kopfzeile hat, die nicht im Zieldokument auftauchen soll.
 
 ```json
 "includeFirstRow": true

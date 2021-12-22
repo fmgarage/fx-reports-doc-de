@@ -7,7 +7,7 @@ has_children: false
 
 ## Dokument/Mappe
 
-Die oberste Ebene eines Templates repräsentiert das zu erstellende Exceldokument. Hier können einige Eigenschaften definiert werden, die dann für das ganze Dokument gelten. Einige können nur hier gesetzt werden; andere können auf einer der unteren Ebenen überschrieben werden. So kann z.B. die Spaltenbreite für das ganze Dokument auf `-1` festgelegt werden, später aber für eine bestimmte Spalte die Breite auf `25` gesetzt werden.
+Die oberste Ebene eines Templates repräsentiert das zu erstellende Exceldokument. Hier können einige Eigenschaften definiert werden, die dann für das ganze Dokument gelten. Einige können nur hier gesetzt werden; andere können auf einer der unteren Ebenen überschrieben werden. So kann z.B. die Spaltenbreite für das ganze Dokument auf `-1` festgelegt werden, später aber für eine bestimmte Spalte z.B. auf `25` gesetzt werden.
 
 Ein minimales Beispieltemplate könnte so aussehen:
 
@@ -33,15 +33,15 @@ Die wichtigsten Eigenschaften sind:
 
 Der Dateiname der zu erstellenden Exceldatei. Wird `filename` nicht definiert, dann ist der Dateiname `[Datum]+[Uhrzeit].xlsx`.
 
-
 ### location
 
-Der Ort, an dem die erstellte Exceldatei gespeichert werden soll. Das kann ein Pfad im Dateisystem sein oder Feld in einer Tabelle. Wird `location` nicht definiert, wird die Datei in den Ordner `fx_reports` auf dem Schreibtisch geschrieben.
+> @todo Wenn field: nur Container? FxReports::a_tmp_[1] sieht aus wie Wiederholfeld?
+
+Der Ort, an dem die erstellte Exceldatei gespeichert werden soll. Das kann ein Pfad im Dateisystem sein oder (Container)Feld in einer Tabelle. Wird `location` nicht definiert, wird die Datei in den Ordner `fx_reports` auf dem Schreibtisch geschrieben.
 
 ### name
 
 Name des Arbeitsblattes. Standardwert: sheet[n]
-
 
 ### columns
 
@@ -52,11 +52,9 @@ Siehe [Spalte]({{ site.baseurl }}{% link writing-templates/column.md %})
 Liste von Zeilen.
 Siehe [Zeile]({{ site.baseurl }}{% link writing-templates/row.md %})
 
-
 ### cells
 Liste von Zellen.
 Siehe [Zelle]({{ site.baseurl }}{% link writing-templates/cell.md %})
-
 
 ### display
 

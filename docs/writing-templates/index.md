@@ -8,19 +8,20 @@ has_children: true
 
 Ein Template definiert das zu erstellende Excel Dokument. Es beschreibt, wie es aussieht und welche Daten an welcher Stelle stehen. Das Template ist zwingend notwendig/unabdingbar, um mit FX Reports Excelausgaben zu erstellen. Wenn man nicht gleich ein eigenes Template "from scratch" erstellen will, ist es eine gute Idee, ein vorhandenes zu nehmen und anzupassen.
 
-Als Blaupause/Vorlage/Bauanleitung braucht ein Template ein valides **JSON Schema**. Darin sind die erlaubten Werte und Strukturen zum Bauen eines Templates definiert. Zum Beispiel wird darin festgelegt, an welcher Stelle man Spalten und Zellen schreiben kann oder welche Schlüssel und Werte in einem Format definiert werden dürfen. Das Schema für FX Reports haben wir in `https://fmgarage.com/schemas/json2excel/v2-1-0.json`@todo definiert.
+Als Blaupause/Vorlage/Bauanleitung braucht ein Template ein valides **JSON Schema**. Darin sind die erlaubten Werte und Strukturen zum Bauen eines Templates definiert. Zum Beispiel wird darin festgelegt, an welcher Stelle man Spalten und Zellen schreiben kann oder welche Schlüssel und Werte in einem Format definiert werden dürfen. Das Schema für FX Reports haben wir in `https://fmgarage.com/schemas/json2excel/v2-1-0.json` definiert.
+> @todo
 
-## Template-Erstellung > Bearbeitung/Werkzeuge?
+## Editoren
 
 Templates werden als JSON Dokumente geschrieben. Die Syntax bzw. das Schema ist leicht zu erlernen. Eine gute Möglichkeit, die Funktionen kennenzulernen, sind die Beispiele (Ordner `examples`) aus dem FX_Reports Verzeichnis.
 
-> grundsätzlich kann man jeden Text-Editor verwenden.
+> @todo grundsätzlich kann man jeden Text-Editor verwenden.
 
 ### mit dem Online-Editor
 
 Unser [Online-Template-Editor](https://fmgarage.github.io/fx-reports/editor/) bietet eine komfortable Möglichkeit, Templates in einer grafischen Oberfläche erstellen.
 
-> Tipp: einfach mal ein Example pasten und "update form" drücken
+> *Tipp*<br>Einfach mal ein Example in das JSON Feld rechts kopieren und auf "Update Form" klicken.
 
 ### mit VSCode
 
@@ -36,7 +37,7 @@ Das wird in der Konfigurationsdatei `settings.json` gemacht. Es gibt 2 Wege, die
 - die Datei öffnet sich
 
 2. mit Tastaturkommandos
-- settings.json direkt öffnen mit <kbd>⌘ Command</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd> / <kbd>Strg</kbd> + <kbd>⇧ Shift</kbd> + <kbd>P</kbd>
+- Kommandos öffnen mit <kbd>F1</kbd>
 - im Suchfeld suchen nach `Open Settings (JSON)`
 - die Datei öffnet sich
 
@@ -53,64 +54,43 @@ Innerhalb der äussersten geschwungenen Klammern, an letzter Stelle (Komma ans E
     }
 ]
 ```
-> @todo welches beispiel?
-```json
-"json.schemas": [
-    {
-        "fileMatch": [
-            "**.prefix.json"
-        ],
-        "url": "https://raw.githubusercontent.com/fmgarage/fx-reports/main/schema/excel_v2-1.schema.json"
-    }
-]
-```
 
 Unter `fileMatch` den Dateinamen und bei Bedarf den Pfad benennen, bei der das Schema genutzt werden soll. Die Namensmaske ist frei bestimmbar. Dann die `settings.json` speichern.
 
 Wird nun eine entsprechende Datei bearbeitet, werden die möglichen Werte innerhalb der Anführungszeichen angezeigt.
 
+<img src="{{ site.baseurl }}/assets/images/vsc-schema-1.png" style="magin-bottom: 20px;">
+
 ### Testen eines Templates
 
-Das Template in FX Reports in den Editor kopieren und mit dem Button `Generate xlsx` ein Excel Dokument erzeugen und prüfen.
-
-
+(Das Template in FX Reports in den Editor kopieren und mit dem Button `Generate xlsx` ein Excel Dokument erzeugen und prüfen.)
+> @todo das ist das normale Vorgehen beim Erstellen
 
 ## Aufbau eines Templates
 
-> basic Aufbau
+> @todo basic Aufbau
 
 **Mappe/Dokument:**
 
 In der obersten Ebene des JSON-Dokuments werden die dokumentspezifischen Eigenschaften definiert, wie z.B. der Ausgabeort und Dateiname des Exceldokuments und für das ganze Dokument gültige Format-, Anzeige- und Druckoptionen.
 
-
-
 **Arbeitsblatt:**
 
-Dann folgen Eigenschaften des Arbeitsblattes. Das können auch wieder Formatoptionen sein, fixierte Bereiche oder z.B. die standard@todo Spaltendefinitionen. Außerdem werden hier die Spalten, Zeilen und Zellen des Arbeitsblattes definiert.
-
-
+Dann folgen Eigenschaften des Arbeitsblattes. Das können auch wieder Formatoptionen sein, fixierte Bereiche oder z.B. die standard > @todo Spaltendefinitionen. Außerdem werden hier die Spalten, Zeilen und Zellen des Arbeitsblattes definiert.
 
 **Spalten:**
 
 Hier werden Format- und Dateneigenschaften eingestellt. Dazu gehören u.a. die Spaltenbreite und Position.
 
-
-
 **Zeilen:**
 
 Hier können sowohl Kopf- als auch Datenzeilen und Auswertungen definiert werden. Daten können als individuelle Zeilen oder als Referenz auf eine Datenquelle im Template gespeichert werden. Zeilenspezifische Formatoptionen werden hier ebenfalls festgelegt.
-
-
 
 **Zellen:**
 
 Für einzelne Zellen kann über ihre Position Größe, Format oder auch Inhalt, also Daten oder etwa eine Bilddatei (z.B. für Logos), festgelegt werden. So können auch aufwändig gestaltete Dokumente mit Überschriften, Beschreibungstexten oder Logos umgesetzt werden.
 
-
-
-
-## Wir erstellen ein Beispieltemplate / Erstellen eines Beispieltemplates
+## Erstellen eines Beispieltemplates
 
 ```json
 {
@@ -121,15 +101,16 @@ Für einzelne Zellen kann über ihre Position Größe, Format oder auch Inhalt, 
 
 Wir beginnen mit einem neuen Template und legen den Namen des zu erstellenden `xlsx` Dokuments fest und setzen die Spaltenbreite `columnWidth` mit `-1` auf automatisch.
 
-Nun wollen wir die Daten, die in der Tabelle stehen sollen, festlegen. Aus einer Exportdatei mit vielen Spalten wählen wir die 3 Spalten `data_name`, `data_age`, `data_adress`, die in der Tabelle als `Name`, `Alter`, `Wohnort` erscheinen sollen. Wir fügen den Knoten `rows` zur Mappe/zum Dokument hinzu und legen darin eine Liste (Liste okay oder immer Array?)@todo mit 2 `row` Objekten an. Die erste Zeile soll vom Typ `header` sein und fett formatiert werden. Die Werte für die Zellen liefern wir wiederum als Liste von `values`: "Name", "Alter", "Wohnort".
+Nun wollen wir die Daten, die in der Tabelle stehen sollen, festlegen. Wir wählen dafür eine Exportdatei mit vielen Spalten aus den Examples: `desktop/examples/data-file/data-file.xlsx`. Aus dieser wählen wir die 3 Spalten `Surname`, `Centimeters`, `StreetAddress`, die in der Tabelle als `Name`, `Größe`, `Adresse` erscheinen sollen. Wir fügen den Knoten `rows` zur Mappe/zum Dokument hinzu und legen darin eine Liste (Liste okay oder immer Array?)>@todo mit 2 `row` Objekten an. Die erste Zeile soll vom Typ `header` sein und fett formatiert werden. Die Werte für die Zellen liefern wir wiederum als Liste von `values`: "Name", "Größe", "Adresse".
 
-(Arrays Reiehnfolge bleibt immer bestehen)
+(Arrays Reihenfolge bleibt immer bestehen)
 
 Und im Formatknoten legen wir mit `"bold": true` eine Formatierung für die Zeile fest.
 
-Im zweiten Objekt holen wir aus der Exporttabelle `data-file.xlsx` im Tempverzeichnis die Daten 3 bestimmten Spalten. In den Knoten `path` schreiben wir also den Pfad zur Quelldatei und unter `fields` listen wir die Spalten, die extrahiert werden.
+Im zweiten Objekt holen wir aus der Exporttabelle `data-file.xlsx` im `examples` Vverzeichnis auf dem Desktop die Daten der 3 bestimmten Spalten. In den Knoten `path` schreiben wir also den Pfad zur Quelldatei und unter `fields` listen wir die Spalten, die extrahiert werden.
 
-> *INFO* Spalten wählen mit `fields` funktioniert nur mit einer entsprechend beschrifteten Kopfzeile. Wenn keine Kopfzeile existiert, kann es sich lohnen, eine einzufügen und mit eindeutigen Benennungenzu versehen. Sollte die Beschriftung auf der y-Achse stehen ... Sollten die Daten horizontal orientiert ...
+> *INFO* <br> Spalten wählen mit `fields` funktioniert nur mit einer entsprechend beschrifteten Kopfzeile. Wenn keine Kopfzeile existiert, kann es sich lohnen, eine einzufügen und mit eindeutigen Benennungen zu versehen.
+>@todo Sollte die Beschriftung auf der y-Achse stehen ... Sollten die Daten horizontal orientiert ...
 
 Weil die Daten aus der Quelltabelle mehrere Zeilen umfassen, entstehen aus diesem Objekt in `rows` auch entsprechend mehrere Zeilen in der Ausgabetabelle.
 
@@ -139,16 +120,17 @@ Der `rows` Eintrag sieht nun so aus:
     "rows": [
         {
             "type": "header",
-            "values": ["Name", "Alter", "Wohnort"],
+            "values": ["Name", "Größe", "Addresse"],
             "format": {"bold": true}
         },
         {
-            "path": "tmp/data-file.xlsx",
-            "fields": ["data_name", "data_age", "data_adress"]
+            "path": "desktop/examples/data-file/data-file.xlsx",
+            "fields": ["Surname", "Centimeters", "StreetAddress"]
         }
     ]
 ```
-Als nächstes wollen wir die 3 Spalten naäher definieren. Wir sagen, daß alle 3 Spalten Daten enthalten und daß die zweite Spalte Zahlen beinhaltet. Dazu öffnen wir einen neuen Knoten `columns`. In diesem Knoten stehen in einer sortierten Liste `column` Objekte, die die Spalten von links nach rechts beschreiben.
+
+Als nächstes wollen wir die 3 Spalten näher definieren. Wir sagen, daß alle 3 Spalten Daten enthalten und daß die zweite Spalte Zahlen beinhaltet. Der Datentyp der anderen beiden Spalten soll Text sein. Dazu öffnen wir einen neuen Knoten `columns`. In diesem Knoten stehen in einer sortierten Liste `column` Objekte, die die Spalten von links nach rechts beschreiben.
 
 ```json
     "columns": [
@@ -158,7 +140,9 @@ Als nächstes wollen wir die 3 Spalten naäher definieren. Wir sagen, daß alle 
     ]
 ```
 
-Die erste und dritte Spalte setzen allerdings nur die Standardwerte, können also auch weggelassen werden. So müssen wir nur die zweite Spalte definieren, dann aber mit Position `pos`, weil die Position sich nicht mehr aus der Reihenfolge der Einträge ableiten lässt.
+Wird der Datentyp nicht explizit gesetzt, wird der Wert aus der Quelle übernommen.
+
+Angenommen es reicht also in diesem Fall, die beiden Textspalten auf dem Typ 'Standard' zu belassen. So müssen wir nur die zweite Spalte definieren, dann aber mit Position `pos`, weil die Position sich nicht mehr aus der Reihenfolge der Einträge ableiten lässt.
 
 Gekürzt um diese Einträge, nur die zweite Spalte:
 
@@ -175,20 +159,21 @@ Unser Template sieht nun so aus:
     "rows": [
         {
             "type": "header",
-            "values": ["Name", "Alter", "Wohnort"],
+            "values": ["Name", "Größe", "Addresse"],
             "format": {"bold": true}
         },
         {
-            "path": "tmp/data-file.xlsx",
-            "fields": ["data_name", "data_age", "data_adress"]
+            "path": "desktop/examples/data-file/data-file.xlsx",
+            "fields": ["Surname", "Centimeters", "StreetAddress"]
         }
     ],
-    "columns": [{"type": "data", "dataType": "number", "pos": 2}]
+    "columns": [{"type": "data", "dataType": "number", "pos": 1}]
 }
 ```
+
 Was haben wir bis jetzt erreicht? Wir haben:
 - aus einem vollen Export eine Auswahl von Felder/Spalten in ein neues Exceldokument übertragen
-- die Kopfzeile mit lesbaren Werten befüllt und
+- die Kopfzeile mit eigenen Werten befüllt und
 - den Datentyp für eine Spalte mit Zahlen auf den passenden Wert gesetzt.
 
 > @todo nächste Funktionen
