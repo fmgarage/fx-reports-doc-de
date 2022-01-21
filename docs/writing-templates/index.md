@@ -8,7 +8,7 @@ has_children: true
 
 Ein Template definiert das zu erstellende Excel Dokument. Es beschreibt, wie es aussieht und welche Daten an welcher Stelle stehen. Das Template ist zwingend notwendig/unabdingbar, um mit FX Reports Excelausgaben zu erstellen. Wenn man nicht gleich ein eigenes Template "from scratch" erstellen will, ist es eine gute Idee, ein vorhandenes zu nehmen und anzupassen.
 
-Als Blaupause/Vorlage/Bauanleitung braucht ein Template ein valides **JSON Schema**. Darin sind die erlaubten Werte und Strukturen zum Bauen eines Templates definiert. Zum Beispiel wird darin festgelegt, an welcher Stelle man Spalten und Zellen schreiben kann oder welche Schlüssel und Werte in einem Format definiert werden dürfen. Das Schema für FX Reports haben wir in `https://fmgarage.com/schemas/json2excel/v2-1-0.json` definiert.
+Als Blaupause/Vorlage/Bauanleitung braucht ein Template ein valides **JSON Schema**. Darin sind die erlaubten Werte und Strukturen zum Bauen eines Templates definiert. Zum Beispiel wird darin festgelegt, an welcher Stelle man Spalten und Zellen schreiben kann oder welche Schlüssel und Werte in einem Format definiert werden dürfen. Das Schema für FX Reports haben wir in `https://fmgarage.com/schema/fxrp-xl/v2-2-0.json` definiert.
 > @todo
 
 ## Editoren
