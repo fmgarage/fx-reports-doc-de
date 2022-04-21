@@ -23,11 +23,11 @@ Unser [Online-Template-Editor](https://fmgarage.github.io/fx-reports/editor/) bi
 
 > *Tipp*<br>Einfach mal ein Example in das JSON Feld rechts kopieren und auf "Update Form" klicken.
 
-### mit VSCode
+### mit VS Code
 
-In VSCode kann ein Schema für bestimmte Dateien und/oder Ordner hinterlegt werden. Das heißt, wir können hier auch unser json2excel Schema für Template Dateien eintragen. Entweder überlegt man sich einen Suffix für alle Template Dateien oder öffnet alle Dateien mit der Endung `json` in einem bestimmten Ordner mit diesem Template.
+In VS Code kann ein Schema für bestimmte Dateien und/oder Ordner hinterlegt werden. Das heißt, wir können hier auch unser json2excel Schema für Template Dateien eintragen. Entweder überlegt man sich einen Suffix für alle Template Dateien oder öffnet alle Dateien mit der Endung `json` in einem bestimmten Ordner mit diesem Template.
 
-#### VSCode einrichten
+#### VS Code einrichten
 
 Das wird in der Konfigurationsdatei `settings.json` gemacht. Es gibt 2 Wege, diese zu öffnen:
 
